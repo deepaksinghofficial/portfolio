@@ -119,19 +119,50 @@ h2.fw-bold {
 }
 
 /* About boxes */
+.about-cards-row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.about-card-col {
+    padding: 0 8px;
+    margin-bottom: 1rem;
+}
+
 .about-box {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.25rem !important;
 }
 
 .about-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-box i {
-  color: var(--primary-color);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.about-box h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.about-box p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--light-text);
 }
 
 /* Background for alternating sections */
@@ -328,4 +359,34 @@ footer {
   .navbar {
     padding: 0.5rem 0;
   }
+}
+
+/* Responsive styles for about cards */
+@media (max-width: 1199.98px) {
+    .about-box {
+        padding: 1rem !important;
+    }
+    
+    .about-box h4 {
+        font-size: 1rem;
+    }
+    
+    .about-box p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .about-cards-row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+    
+    .about-card-col {
+        min-width: 200px;
+        padding: 0 4px;
+    }
 } 
