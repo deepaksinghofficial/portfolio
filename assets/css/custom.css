@@ -1,0 +1,230 @@
+/* 
+   Custom CSS for Deepak Singh's Portfolio
+   Theme: Light Pink Modern
+*/
+
+/* ===== Base Styles ===== */
+:root {
+  /* Color Palette - Light Pink Theme */
+  --primary-color: #ff80ab;         /* Primary Pink */
+  --primary-dark: #c75080;          /* Darker Pink for hover states */
+  --primary-light: #ffb2dd;         /* Lighter Pink for backgrounds */
+  --secondary-color: #f8bbd0;       /* Secondary Pink */
+  --accent-color: #d81b60;          /* Accent Pink for highlights */
+  --bg-color: #fff5f8;              /* Very Light Pink Background */
+  --text-color: #37474f;            /* Dark Blue-Gray for text */
+  --light-text: #78909c;            /* Lighter text color */
+  --card-bg: #ffffff;               /* White for cards */
+  --border-color: #f3e5f5;          /* Light border color */
+}
+
+/* Reset and Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Custom utility class for section padding */
+.py-6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* ===== Navigation Styles ===== */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  color: var(--accent-color);
+}
+
+.nav-link {
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* ===== Hero Section Styles ===== */
+#hero {
+  background-color: var(--bg-color);
+  padding-top: 7rem;
+}
+
+#hero h1 {
+  color: var(--accent-color);
+  font-size: 3rem;
+}
+
+#hero h2 {
+  color: var(--light-text);
+  font-weight: 400;
+}
+
+/* Profile image style */
+.profile-image {
+  border: 5px solid var(--primary-light);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.03);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-secondary {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--primary-light);
+  color: var(--accent-color);
+}
+
+/* ===== Section Styles ===== */
+/* Section heading */
+h2.fw-bold {
+  color: var(--accent-color);
+}
+
+/* Custom divider */
+.divider-custom {
+  width: 5rem;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* About boxes */
+.about-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-box i {
+  color: var(--primary-color);
+}
+
+/* Background for alternating sections */
+.bg-light {
+  background-color: #fff;
+}
+
+/* ===== Skills Section Styles ===== */
+.skill-item .progress-bar {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* ===== Experience Section Styles ===== */
+.timeline-container {
+  position: relative;
+}
+
+.timeline-item {
+  background-color: var(--card-bg);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-content h4 {
+  color: var(--accent-color);
+}
+
+/* ===== Projects Section Styles ===== */
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.badge {
+  background-color: var(--primary-light);
+  color: var(--accent-color);
+}
+
+/* ===== Contact Section Styles ===== */
+.card .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(255, 128, 171, 0.25);
+}
+
+.contact-info a {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: var(--primary-color);
+}
+
+/* ===== Footer Styles ===== */
+footer {
+  background-color: #fff;
+  border-top: 1px solid var(--border-color);
+  color: var(--light-text);
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 991.98px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .py-6 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  #hero h1 {
+    font-size: 2rem;
+  }
+  
+  .navbar {
+    padding: 0.5rem 0;
+  }
+} 
